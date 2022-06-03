@@ -1,0 +1,17 @@
+{
+    "name": "abdulaziz_m/alif-tech-test",
+    "authors": [
+        {
+            "name": "abdulaziz-mirzaeev",
+            "email": "abdulaziz.ismail2003@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "foundation/"
+        }
+    }
+}
