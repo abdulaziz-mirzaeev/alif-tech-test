@@ -7,7 +7,9 @@
         }
     ],
     "require": {
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.4",
+        "mailjet/mailjet-apiv3-php": "^1.5",
+        "telesign/telesign": "^3.0"
     },
     "autoload": {
         "psr-4": {

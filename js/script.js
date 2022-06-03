@@ -49,6 +49,9 @@ let Page = function () {
                 room_id: $("#room_id").val(),
                 date_from: $("#date_from").val(),
                 date_to: $("#date_to").val(),
+                name: $("#name").val(),
+                phone: $("#phone").val(),
+                email: $("#email").val(),
             };
 
             $.ajax({
@@ -58,6 +61,10 @@ let Page = function () {
                 success: function (response) {
                     if (response.status === 'yes') {
                         notify(response.message);
+                        let email = response.emailStatus;
+                        let sms = response.smsStatus;
+                        notify(email.message, email.status === 'yes' ? 'bg-success' : 'bg-danger');
+                        notify(sms.message, sms.status === 'yes' ? 'bg-success' : 'bg-danger');
                     } else if (response.status === 'no') {
                         notify(response.message, 'bg-danger');
                     }
